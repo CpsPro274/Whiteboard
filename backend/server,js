@@ -12,8 +12,8 @@ const io = new Server(server, {
   cors: { origin: "http://localhost:5173" }
 });
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("✅ DB Connected"))
-  .catch(err => console.log("❌ DB Error:", err));
+  .then(() => console.log(" DB Connected"))
+  .catch(err => console.log("DB Error:", err));
 const Click = mongoose.model('login', new mongoose.Schema({ x: Number, y: Number }), 'login');
 io.on('connection', (socket) => {
   console.log('User connected:', socket.id);
